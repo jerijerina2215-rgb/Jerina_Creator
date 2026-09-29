@@ -1,0 +1,24 @@
+# Core backend
+fastapi>=0.99.0,<1.0.0
+# Uvicorn (ASGI server) - keep under 1.0 to remain compatible with many frameworks
+uvicorn[standard]>=0.22.0,<1.0.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Document generation
+python-docx>=1.2.0
+fpdf>=1.7.2
+
+# Frontend (Streamlit). Use a compatible range; install may pull matching numpy/pandas
+streamlit>=1.26.0,<2.0.0
+
+# Numerical/plotting libs: leave unpinned so pip can choose compatible wheels for
+# the user's Python version. Pin only if you have a specific requirement.
+# numpy
+# matplotlib
+
+# Pydantic: FastAPI 0.99.x requires pydantic <2.0, so keep 1.x range
+pydantic>=1.10.0,<2.0.0
+# Optional: google generative AI SDK (commented to avoid install without API key)
+# google-generativeai==1.0.0
+PyPDF2>=3.0.0
